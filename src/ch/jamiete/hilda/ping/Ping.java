@@ -3,9 +3,9 @@ package ch.jamiete.hilda.ping;
 import ch.jamiete.hilda.Hilda;
 import ch.jamiete.hilda.plugins.HildaPlugin;
 
-public class Main extends HildaPlugin {
+public class Ping extends HildaPlugin {
 
-    public Main(Hilda hilda) {
+    public Ping(Hilda hilda) {
         super(hilda);
     }
 

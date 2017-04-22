@@ -1,0 +1,6 @@
+{
+    "name": "ping",
+    "mainClass": "ch.jamiete.hilda.ping.Ping",
+    "version": "1.0.0",
+    "author": "jamietech"
+}
