@@ -13,9 +13,7 @@
 
 	<groupId>ch.jamiete.hilda.ping</groupId>
 	<artifactId>Ping</artifactId>
-	<version>1.1.1</version>
-	<name>Ping</name>
-	<description>A ping plugin for Hilda.</description>
+	<version>1.1.2</version>
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -41,7 +39,7 @@
 		<dependency>
 			<groupId>ch.jamiete.hilda</groupId>
 			<artifactId>Hilda</artifactId>
-			<version>1.1.5</version>
+			<version>1.1.7</version>
 		</dependency>
 	</dependencies>
 

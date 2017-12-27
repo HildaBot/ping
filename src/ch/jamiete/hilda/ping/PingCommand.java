@@ -34,7 +34,7 @@ public class PingCommand extends ChannelCommand {
 
             @Override
             public void accept(Message pong) {
-                pong.editMessage(pong.getContent() + " (current message response " + message.getCreationTime().until(pong.getCreationTime(), ChronoUnit.MILLIS) + "ms)").queue();
+                pong.editMessage(pong.getContentDisplay() + " (current message response " + message.getCreationTime().until(pong.getCreationTime(), ChronoUnit.MILLIS) + "ms)").queue();
             }
 
         });
