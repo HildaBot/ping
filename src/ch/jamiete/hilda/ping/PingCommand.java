@@ -5,9 +5,8 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 import ch.jamiete.hilda.Hilda;
 import ch.jamiete.hilda.commands.ChannelCommand;
-import net.dv8tion.jda.core.MessageBuilder;
-import net.dv8tion.jda.core.MessageBuilder.Formatting;
-import net.dv8tion.jda.core.entities.Message;
+import net.dv8tion.jda.api.MessageBuilder;
+import net.dv8tion.jda.api.entities.Message;
 
 public class PingCommand extends ChannelCommand {
     private final Ping ping;
@@ -28,13 +27,13 @@ public class PingCommand extends ChannelCommand {
 
         mb.append(":ping_pong: Pong! ");
         mb.append(this.ping.monitor.getMinutes()).append(" minute average ");
-        mb.append(this.ping.monitor.getAverage() + "ms", Formatting.BOLD);
+        mb.append(this.ping.monitor.getAverage() + "ms", MessageBuilder.Formatting.BOLD);
 
         message.getChannel().sendMessage(mb.build()).queue(new Consumer<Message>() {
 
             @Override
             public void accept(Message pong) {
-                pong.editMessage(pong.getContentDisplay() + " (current message response " + message.getCreationTime().until(pong.getCreationTime(), ChronoUnit.MILLIS) + "ms)").queue();
+                pong.editMessage(pong.getContentDisplay() + " (current message response " + message.getTimeCreated().until(pong.getTimeCreated(), ChronoUnit.MILLIS) + "ms)").queue();
             }
 
         });

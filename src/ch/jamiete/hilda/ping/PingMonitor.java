@@ -14,7 +14,7 @@ public class PingMonitor implements Runnable {
     @Override
     public void run() {
         synchronized (this.q) {
-            this.q.add(this.hilda.getBot().getPing());
+            this.q.add(this.hilda.getBot().getGatewayPing());
         }
     }
 

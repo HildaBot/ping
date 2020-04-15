@@ -1,8 +1,8 @@
 package ch.jamiete.hilda.ping;
 
-import java.util.concurrent.TimeUnit;
 import ch.jamiete.hilda.Hilda;
 import ch.jamiete.hilda.plugins.HildaPlugin;
+import java.util.concurrent.TimeUnit;
 
 public class Ping extends HildaPlugin {
     public final PingMonitor monitor = new PingMonitor(this.getHilda());
